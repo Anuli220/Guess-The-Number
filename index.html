@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Colours - Drag the Colour To Its Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app" role="application" aria-label="Matching Colours Game">
+        <h1>Matching Colours - Match The Colours To Its Name</h1>
+        <p class="lead">Drag the coloured square into the matching labelled box</p>
+        <div class="board">
+            <div class="palette" aria-hidden="false">
+                <h2></h2>
+                <div class="items" id="items">
+                    Palette
+                    <div class="item red" draggable="true" id="c-red" data-color="red" aria-grabbed="false">Red</div>
+                    <div class="item blue" draggable="true" id="c-blue" data-color="blue" aria-grabbed="false">Blue</div>
+                    <div class="item yellow" draggable="true" id="c-yellow" data-color="yellow" aria-grabbed="false">Yellow</div>
+                    <div class="item green" draggable="true" id="c-green" data-color="green" aria-grabbed="false">Green</div>
+                    <div class="item purple" draggable="true" id="c-purple" data-color="purple" aria-grabbed="false">Purple</div>
+                    <div class="item orange" draggable="true" id="c-orange" data-color="orange" aria-grabbed="false">Orange</div>
+                </div>
+            </div>
+            <div class="target" aria-hidden="false">
+                <h2>Match the names</h2>
+                <div class="slots" id="slots">
+                    <div class="slot" data-accept="red" id="s-red">Red</div>
+                    <div class="slot" data-accept="blue" id="s-blue">Blue</div>
+                    <div class="slot" data-accept="green" id="s-green">Green</div>
+                    <div class="slot" data-accept="yellow" id="s-yellow">Yellow</div>
+                    <div class="slot" data-accept="purple" id="s-purple">Purple</div>
+                    <div class="slot" data-accept="orange" id="s-orange">Orange</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="controls">
+                <button class="buttonPrimary" id="shuffleBtn" title="shuffleColours">Shuffle</button>
+                <button class="btnHost" id="resetBtn" title="resetGame">Reset</button>
+            </div>
+            <div class="status" aria-live="polite">Score: <span class="score" id="score"></span>/<span id="total">6</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
